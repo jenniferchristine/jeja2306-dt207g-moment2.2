@@ -23,7 +23,7 @@ $detailcolor: lighten($primary-color, 30%);
 
 @mixin color($bkgd, $text) {
     background-color: $bkgd;
-    color: $textcolor;
+    color: $text;
 }
 
 @mixin align($display, $align, $justify) {
