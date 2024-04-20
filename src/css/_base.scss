@@ -8,6 +8,7 @@ $paragraph-text: 'Inter';
 $primary-color: #464646;
 $darker_color: darken($primary-color, 10%);
 $darkest_color: darken($primary-color, 14%);
+$lighter_color: lighten($primary-color, 10%);
 $light_color: lighten($primary-color, 100%);
 $detailcolor: lighten($primary-color, 30%);
 

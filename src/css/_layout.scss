@@ -2,7 +2,9 @@
 
 body {
     @include color($primary-color, $light_color);
-    text-align: left; font: 100% $font-stack;
+    @include align(flex, center, center);
+    text-align: left; font: 100% $font-stack; 
+    flex-direction: column; 
 
     h1 { text-align: center; }
     h2 { font-size: 20px; text-align: center; }
@@ -13,9 +15,17 @@ header {
     display: flex;
     justify-content: center;
     width: 200px; 
-    margin: 0 auto; 
 
     img { width: 100%; padding: 3em; }
+}
+
+main {
+    @include align(flex, center, center);
+    background-color: $lighter_color;
+    border: 1px solid $detailcolor;
+    width: 800px;
+    border-radius: 0.2em;
+    height: 200px;
 }
 
 footer {
