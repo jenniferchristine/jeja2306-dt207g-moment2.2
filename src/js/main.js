@@ -1,5 +1,13 @@
 "use strict";
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById("logo");
+
+    logo.addEventListener('click', function() {
+        window.location.href = "index.html";
+    });
+});
+
 async function getData() { // hämta data från api
     let url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience";
 
@@ -28,7 +36,7 @@ async function displayData() {
             // målar ut
             workExperience.innerHTML = `
             <h2>Arbetsplats: ${item.companyname}</h2>
-            <h3>Jobtitel: ${item.jobtitle}</h3>
+            <h3>Jobbtitel: ${item.jobtitle}</h3>
             <h4>Ort: ${item.location}</h4>
             <p><span class="desc">"</span> ${item.description} <span class="desc">"</span></p>`;
 
