@@ -14,24 +14,50 @@ body {
 header {
     display: flex;
     justify-content: center;
-    width: 200px; 
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
 
-    img { width: 100%; padding: 3em; }
+    img { width: 150px; padding: 2em; margin-top: 1em; }
 }
 
+nav {
+    width: 100%;
+    border-radius: 0.2em 0.2em 0 0;
+    padding: 1em 0 1em 0;
+    background-color: $detailcolor;
+    border-right: 1px solid $detailcolor;
+    border-left: 1px solid $detailcolor;
+    border-top: 1px solid $detailcolor;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin-right: 20px;
+
+        &:hover { border-bottom: 3px solid $light_color; }
+        &:last-child { margin-right: 0; }
+        a { color: white; text-decoration: none; font: 100% $navtext; }
+    }
+}
 main {
     @include align(flex, center, center);
     background-color: $lighter_color;
     border: 1px solid $detailcolor;
     width: 800px;
-    border-radius: 0.2em;
+    border-radius: 0 0 0.2em 0.2em;
     height: 200px;
 }
 
 footer {
     @include align(flex, center, center);
-    align-self: center;
-    margin: 0 auto;
+    margin-top: 5em;
     gap: 1em; 
 
     img { @include size(40px, 15px); }
