@@ -1,6 +1,6 @@
 "use strict";
 
-async function fetchData() { // hämta data från api
+async function getData() { // hämta data från api
     let url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience";
 
     try {
@@ -20,10 +20,11 @@ async function displayData() {
     const resultDiv = document.getElementById("result");
 
     try {
-        const data = await fetchData();
+        const data = await getData();
         data.forEach(item => { // loopar igenom varje objekt och skriver ut
             const workExperience = document.createElement("div");
             workExperience.classList.add("workexperience");
+            
             workExperience.innerHTML = `
             <h2>Arbetsplats: ${item.companyname}</h2>
             <h3>Jobtitel: ${item.jobtitle}</h3>
