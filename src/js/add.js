@@ -5,26 +5,45 @@ addBtn.addEventListener('click', () => {
     addData();
 });
 
-function addData() {
-    const form = document.getElementById("addform");
-    const newData = new FormData(form);
-    const url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience"
+async function addData() {
+    const companyname = document.getElementById('companyname').value; // hämta in värdet från inputs
+    const jobtitle = document.getElementById('jobtitle').value;
+    const location = document.getElementById('location').value;
+    const description = document.getElementById('description').value;
 
-    fetch(url, {
-        method: 'POST',
-        body: newData
-    })
-    
-    .then(response => {
+    const workexperience = { // skapar objekt för insamlad data
+        companyname: companyname, // värde för varje nyckel
+        jobtitle: jobtitle,
+        location: location,
+        description: description
+    };
+
+    try {
+        const response = await fetch('https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience', {
+            method: 'POST', // skickar postförfrågan till url
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(workexperience)
+        });
+
         if (!response.ok) {
-            throw new Error("Failed to add data to database");
+            throw new Error('Failed to add data to CV');
         }
-        return response.json();
-    })
-    .then(data => {
-        console.log("Data added", data);
-    })
-    .catch (error => {
-        console.error("Error when adding data", error);
-    });
+
+        // töm fälten efter tillägg
+        document.getElementById('companyname').value = "";
+        document.getElementById('jobtitle').value = "";
+        document.getElementById('location').value = "";
+        document.getElementById('description').value = "";
+
+        const data = await response.json();
+        console.log('Data added to CV:', data);
+
+        window.location.href = "index.html"; // skicka användaren dit det lagts till
+        alert("Din arbetserfarenhet har lagts till! Du skickas nu till resultatet");
+
+    } catch (error) {
+        console.error('Error adding data to CV:', error);
+    }
 }
