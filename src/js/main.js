@@ -30,6 +30,10 @@ async function displayData() {
             <h4>Ort: ${item.location}</h4>
             <p><span class="desc">"</span> ${item.description} <span class="desc">"</span></p>
             `;
+            const deleteBtn = document.createElement("button");
+            deleteBtn.classList.add("material-symbols-outlined");
+            deleteBtn.innerHTML = "delete";
+            workExperience.appendChild(deleteBtn);
             resultDiv.appendChild(workExperience);
         });
     } catch (error) {

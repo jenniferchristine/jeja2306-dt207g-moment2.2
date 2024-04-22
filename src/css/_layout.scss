@@ -8,8 +8,8 @@ body {
 
     h1 { text-align: center; font-size: 25px; padding: 1em 0 1em 0; }
     h2 { font-size: 20px; margin: 0; }
-    h3 { font-size: 18px; margin: 0.5em 0 0 0;}
-    h4 { margin: 0; }
+    h3 { font-size: 18px; margin: 0.4em 0 0 0;}
+    h4 { margin: 0.2em 0 0 0; }
     p { font: 100% $paragraph-text; margin-top: 8px; }
 }
 
@@ -69,6 +69,20 @@ main {
 
     .workexperience {
         padding: 1.5em 0 2em 2em;
+        display: flex;
+        flex-direction: column;
+
+        .material-symbols-outlined {
+            background: none;
+            border: none;
+            color: $deviating-color;
+            font-size: 30px;
+            align-self: flex-end;
+            margin-right: 25px;
+            transition: 0.1s;
+
+            &:hover { transform: scale(1.2); cursor: pointer; }
+        }
 
         h2, h3, h4 { letter-spacing: 0.5px; }
         .desc { font-size: 22px; color: $deviating-color; }
