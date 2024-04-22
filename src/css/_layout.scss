@@ -44,11 +44,7 @@ nav {
         a { text-decoration: none; padding: 5px; }
     }
 
-    .material-symbols-outlined { 
-        font-size: 30px; 
-        color: $deviating-color; 
-        font-weight: 400; 
-    }
+    .material-symbols-outlined { @include text(30px, $deviating-color); font-weight: 400; }
 
     #position { 
         background-color: $lighter_color; 
@@ -64,9 +60,7 @@ main {
     background-color: $lighter_color;
     flex-direction: column;
 
-    #result {
-        width: 100%;
-    }
+    #result { width: 100%; }
 
     .workexperience {
         padding: 1.5em 0 2em 2em;
@@ -74,10 +68,9 @@ main {
         flex-direction: column;
 
         .material-symbols-outlined {
+            @include text(30px, $deviating-color);
             background: none;
             border: none;
-            color: $deviating-color;
-            font-size: 30px;
             align-self: flex-end;
             margin-right: 25px;
             transition: 0.1s;
@@ -85,38 +78,29 @@ main {
             &:hover { transform: scale(1.2); cursor: pointer; } }
 
         h2, h3, h4 { letter-spacing: 0.5px; }
-        .desc { font-size: 22px; color: $deviating-color; }
+        .desc { @include text(22px, $deviating-color); }
         &:nth-child(even) { background-color: $primary-color; } 
     }
 
     #addbtn {
-        width: 464px;
-        height: 50px;
+        @include align(flex, center, center);
+        @include size(464px, 50px);
+        @include border(0, 0 0 5px 5px);
         margin-bottom: 4em;
-        border-radius: 0 0 5px 5px;
-        border: 0;
         background-color: $deviating-color;
         font: 100% $paragraph-text;
         font-weight: 600;
         color: $primary-color;
         letter-spacing: 0.5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: 0.2s;
         
-        &:hover {
-            filter: brightness(115%);
-            cursor: pointer;
-        }
+        &:hover { filter: brightness(115%); cursor: pointer; }
 
         .material-symbols-outlined {
+            @include text(30px, $primary-color);
             border: none;
             background: none;
-            color: $primary-color;
-            font-weight: 600;
-            font-size: 30px;
-        }
+            font-weight: 600; }
     }
 }
 
@@ -135,25 +119,21 @@ form {
     }
 
     input {
-        width: 100%;
-        height: 40px;
-        border-radius: 3px;
-        border: 0;
+        @include size(100%, 40px);
+        @include border(0, 3px);
         font: 100% $paragraph-text;
         font-size: 14px;
 
-        &[type="text"] { padding-left: 0.8em; box-sizing: border-box; }
+        &[type="text"] { @include boxspace(0 0 0 0.8em, border-box); }
     }
     
     textarea {
-        width: 100%;
-        height: 120px;
-        border-radius: 3px;
-        border: 0;
+        @include size(100%, 120px);
+        @include border(0, 3px);
         font: 100% $paragraph-text;
 
         &::placeholder { font-size: 14px; padding: 0.5em 0 0 0.5em; }
-        &[type="text"] { padding: 0.3em 0 0 0.3em; box-sizing: border-box; }
+        &[type="text"] { @include boxspace(0.3em 0 0 0.3em, border-box); }
     }
 }
 

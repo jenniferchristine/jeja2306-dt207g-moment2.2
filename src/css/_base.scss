@@ -45,3 +45,13 @@ $border-style: 1px solid;
     border: $border;
     border-radius: $radius;
 }
+
+@mixin boxspace($padding, $box) {
+    padding: $padding;
+    box-sizing: $box;
+}
+
+@mixin text($size, $color) {
+    font-size: $size;
+    color: $color;
+}
