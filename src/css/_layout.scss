@@ -44,7 +44,12 @@ nav {
         a { text-decoration: none; padding: 5px; }
     }
 
-    .material-symbols-outlined { @include text(30px, $deviating-color); font-weight: 400; }
+    .material-symbols-outlined { 
+        @include text(30px, $deviating-color); 
+        font-weight: 400; 
+
+        &:hover { color: $deviating-light; }
+    }
 
     #position { 
         background-color: $lighter_color; 
@@ -94,7 +99,7 @@ main {
         letter-spacing: 0.5px;
         transition: 0.2s;
         
-        &:hover { filter: brightness(115%); cursor: pointer; }
+        &:hover { background-color: $deviating-light; cursor: pointer; }
 
         .material-symbols-outlined {
             @include text(30px, $primary-color);
@@ -103,7 +108,6 @@ main {
             font-weight: 600; }
     }
 }
-
 
 form {
     padding: 2em;
