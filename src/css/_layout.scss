@@ -62,6 +62,7 @@ main {
     @include size(800px, auto);
     @include border($border-style $detailcolor, 0 0 0.2em 0.2em);
     background-color: $lighter_color;
+    flex-direction: column;
 
     #result {
         width: 100%;
@@ -81,12 +82,56 @@ main {
             margin-right: 25px;
             transition: 0.1s;
 
-            &:hover { transform: scale(1.2); cursor: pointer; }
-        }
+            &:hover { transform: scale(1.2); cursor: pointer; } }
 
         h2, h3, h4 { letter-spacing: 0.5px; }
         .desc { font-size: 22px; color: $deviating-color; }
         &:nth-child(even) { background-color: $primary-color; } 
+    }
+
+    #addbtn {
+        width: 464px;
+        height: 50px;
+        margin-bottom: 4em;
+        border-radius: 0 0 5px 5px;
+        border: 0;
+        background-color: $deviating-color;
+        font: 100% $paragraph-text;
+        font-weight: 600;
+        color: $primary-color;
+        letter-spacing: 0.5px;
+    }
+}
+
+form {
+    padding: 2em;
+    background-color: $primary-color;
+    border-radius: 5px 5px 0 0;
+    width: 400px;
+
+    div {
+        margin: 1em 0 0 0;
+
+        &:first-child { margin: 0; }
+        &:last-child { margin: 2em 0 0 0; }
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        border: 0;
+        font: 100% $paragraph-text;
+        font-size: 14px;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 120px;
+        border-radius: 3px;
+        border: 0;
+        font-size: 14px;
+        font: 100% $paragraph-text;
     }
 }
 
