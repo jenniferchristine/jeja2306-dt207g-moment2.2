@@ -25,10 +25,10 @@ async function displayData() {
             const workExperience = document.createElement("div");
             workExperience.classList.add("workexperience");
             workExperience.innerHTML = `
-            <h2>${item.companyname}</h2>
-            <h3>${item.jobtitle}</h3>
-            <h4>${item.location}</h4>
-            <p>${item.description}</p>
+            <h2>Arbetsplats: ${item.companyname}</h2>
+            <h3>Jobtitel: ${item.jobtitle}</h3>
+            <h4>Ort: ${item.location}</h4>
+            <p><span class="desc">"</span> ${item.description} <span class="desc">"</span></p>
             `;
             resultDiv.appendChild(workExperience);
         });
