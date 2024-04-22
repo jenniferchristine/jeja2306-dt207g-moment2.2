@@ -100,8 +100,26 @@ main {
         font-weight: 600;
         color: $primary-color;
         letter-spacing: 0.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        
+        &:hover {
+            filter: brightness(115%);
+            cursor: pointer;
+        }
+
+        .material-symbols-outlined {
+            border: none;
+            background: none;
+            color: $primary-color;
+            font-weight: 600;
+            font-size: 30px;
+        }
     }
 }
+
 
 form {
     padding: 2em;
@@ -123,6 +141,8 @@ form {
         border: 0;
         font: 100% $paragraph-text;
         font-size: 14px;
+
+        &[type="text"] { padding-left: 0.8em; box-sizing: border-box; }
     }
     
     textarea {
@@ -130,8 +150,10 @@ form {
         height: 120px;
         border-radius: 3px;
         border: 0;
-        font-size: 14px;
         font: 100% $paragraph-text;
+
+        &::placeholder { font-size: 14px; padding: 0.5em 0 0 0.5em; }
+        &[type="text"] { padding: 0.3em 0 0 0.3em; box-sizing: border-box; }
     }
 }
 
