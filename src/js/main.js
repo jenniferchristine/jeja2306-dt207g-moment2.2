@@ -25,6 +25,7 @@ async function displayData() {
             const workExperience = document.createElement("div");
             workExperience.classList.add("workexperience");
             
+            // målar ut
             workExperience.innerHTML = `
             <h2>Arbetsplats: ${item.companyname}</h2>
             <h3>Jobtitel: ${item.jobtitle}</h3>
@@ -34,12 +35,13 @@ async function displayData() {
             const deleteBtn = document.createElement("button");
             deleteBtn.classList.add("material-symbols-outlined");
             deleteBtn.innerHTML = "delete";
+
             workExperience.appendChild(deleteBtn);
             resultDiv.appendChild(workExperience);
 
             deleteBtn.addEventListener('click', () => {
-                resultDiv.removeChild(workExperience);
-                deleteData(item.id);
+                resultDiv.removeChild(workExperience); // tar bort direkt från sidan
+                deleteData(item.id); // skickar vidare id för att ta bort specifikt
             });
         });
     } catch (error) {
@@ -48,10 +50,10 @@ async function displayData() {
 };
 
 function deleteData(id) {
-    const url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience/" + id;
+    const url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience/" + id; // lägger till angivet id
 
     fetch(url, {
-        method: 'DELETE'
+        method: 'DELETE' // metod delete för att radera
     })
         .then(response => {
             if (!response.ok) {

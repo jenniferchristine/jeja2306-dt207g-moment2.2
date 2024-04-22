@@ -11,6 +11,11 @@ async function addData() {
     const location = document.getElementById('location').value;
     const description = document.getElementById('description').value;
 
+    if (!companyname || !jobtitle || !location || !description) {
+        alert("Fyll i alla fält för att lägga till");
+        return; // avbryter om fälten är tomt
+    }
+
     const workexperience = { // skapar objekt för insamlad data
         companyname: companyname, // värde för varje nyckel
         jobtitle: jobtitle,
@@ -41,7 +46,7 @@ async function addData() {
         console.log('Data added to CV:', data);
 
         window.location.href = "index.html"; // skicka användaren dit det lagts till
-        alert("Din arbetserfarenhet har lagts till! Du skickas nu till resultatet");
+        alert("Din arbetserfarenhet har lagts till! Du skickas nu till resultatsidan");
 
     } catch (error) {
         console.error('Error adding data to CV:', error);
