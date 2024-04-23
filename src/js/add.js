@@ -54,7 +54,7 @@ async function addData() {
         console.log('Data added to CV:', data);
 
         window.location.href = "index.html"; // skicka användaren dit det lagts till
-        alert("Din arbetserfarenhet har lagts till! Du skickas nu till resultatsidan");
+        alert("Din arbetserfarenhet har lagts till! Du skickas nu till resultatet");
 
     } catch (error) {
         console.error('Error adding data to CV:', error);
