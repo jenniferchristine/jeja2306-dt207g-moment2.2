@@ -1,13 +1,5 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
-    const logo = document.getElementById("logo");
-
-    logo.addEventListener('click', function () {
-        window.location.href = "index.html";
-    });
-});
-
 async function getData() { // hämta data från api
     let url = "https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience";
 
