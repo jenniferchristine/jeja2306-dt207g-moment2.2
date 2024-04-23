@@ -141,6 +141,19 @@ form {
     }
 }
 
+section {
+    width: 100%;
+
+    div {
+        @include boxspace(2em 4em 5em 4em, border-box);
+        width: 100%;
+        margin: 0 auto;
+        background-color: $primary-color;
+
+        .material-symbols-outlined { color: $deviating-color; }
+    }
+}
+
 footer {
     @include align(flex, center, center);
     margin: 3em 0;
