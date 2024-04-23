@@ -97,6 +97,7 @@ main {
         font-weight: 600;
         color: $primary-color;
         letter-spacing: 0.5px;
+        max-width: 100%;
         transition: 0.2s;
         
         &:hover { background-color: $deviating-light; cursor: pointer; }
@@ -161,4 +162,42 @@ footer {
 
     img { @include size(40px, 15px); }
     p { font-size: 12px; }
+}
+
+@media only screen and (max-width: 800px) {
+    main { 
+        width: 100%; 
+        border: none; 
+
+        .workexperience {
+            padding: 1.5em 1em;
+            .material-symbols-outlined { margin: 0.5em 0 0 0; }
+        }
+    }
+
+    header { width: 100%; }
+    #textcontainer { border: $border-style $detailcolor; }
+}
+
+@media only screen and (max-width: 500px) {
+    form { 
+        width: 100%; 
+
+        input { width: 100%; }
+
+        div { width: 95%; margin: 0 auto; padding-bottom: 1em;
+            &:first-child { margin: 0 auto; }
+            &:last-child { margin: 0 auto; }
+        }
+    }
+
+    #addbtn {
+        width: 100%; 
+        margin-bottom: 0!important;
+    }
+
+    section>div {
+        padding: 1em; border: 0!important; 
+        border-bottom: $border-style $detailcolor!important;
+    }
 }
