@@ -15,7 +15,7 @@
 # Introduktion till webbtjänster
 
 >### Laboration i moment 2.2:
->I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats]()) som använder Fetch API för att hämta, skicka och radera data till och från en webbtjänst. Jag har använt mig utav PostgreSQL för att skapa webbtjänsten. 
+>I denna laboration har jag skapat en webbplats ([länk till publicerad webbplats](https://jeja2306-dt207g-moment2.netlify.app/)) som använder Fetch API för att hämta, skicka och radera data till och från en webbtjänst. Jag har använt mig utav PostgreSQL för att skapa webbtjänsten. 
 >
 ><b>Nedan finns en länk till webbtjänsten samt dess metoder, anrop och tabell:</b>
 
