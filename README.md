@@ -21,7 +21,7 @@
 
 <br>
 
-[Länk till API](https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience)
+[Länk till API](https://jeja2306-dt207g-moment2-1.onrender.com/cv/workexperience) (publicerad på Render.com)
 <br>
 [Länk till Github-repo för webbtjänst](https://github.com/jenniferchristine/jeja2306-dt207g-moment2.1.git)
 
