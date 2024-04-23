@@ -17,7 +17,7 @@ async function getData() { // hämta data från api
 };
 
 async function displayData() {
-    const resultDiv = document.getElementById("result");
+    const resultDiv = document.getElementById("fade");
 
     try {
         const data = await getData();
